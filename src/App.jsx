@@ -1,25 +1,28 @@
+import HeaderComponent from "./components/header";
+import LinkComponent from "./components/link";
+import UlComponent from "./components/ul";
 import "./css/style.css";
 import imgLogo from "./images/logo.svg";
 
 function App() {
   return (
     <>
-      <header>
+      <HeaderComponent>
         <img src={imgLogo} width="125rem" />
         <nav className="nav-header">
-          <ul>
+          <UlComponent>
             <li>
-              <a href="#">Home</a>
+              <LinkComponent href="#">Home</LinkComponent>
             </li>
             <li>
-              <a href="#">Cursos</a>
+              <LinkComponent href="#">Cursos</LinkComponent>
             </li>
             <li>
-              <a href="#">Contato</a>
+              <LinkComponent href="#">Contato</LinkComponent>
             </li>
-          </ul>
+          </UlComponent>
         </nav>
-      </header>
+      </HeaderComponent>
 
       <main>
         <section className="info">
