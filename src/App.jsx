@@ -1,8 +1,15 @@
+import ButtonComponent from "./components/button";
+import SectionComponent from "./components/section";
+import FormComponent from "./components/section";
 import HeaderComponent from "./components/header";
 import LinkComponent from "./components/link";
+import MainComponent from "./components/main";
+import ParagraphComponent from "./components/paragraph";
+import TittleComponent from "./components/tittle";
 import UlComponent from "./components/ul";
 import "./css/style.css";
 import imgLogo from "./images/logo.svg";
+import DivName from "./components/divName";
 
 function App() {
   return (
@@ -24,34 +31,34 @@ function App() {
         </nav>
       </HeaderComponent>
 
-      <main>
+      <MainComponent>
         <section className="info">
-          <h1>
+          <TittleComponent>
             EMBAQUE CONOSCO NESSA VIAJEM, APRENDA TUDO SOBRE AS TECNOLOGIAS MAIS
-            USADAS ATUALMENTE
-          </h1>
-          <p>
+            USADAS!
+          </TittleComponent>
+          <ParagraphComponent>
             Aprenda do zero a construir aplicações completas Front-end &
             Back-end. E tudo que o mercado da tecnologia pode lhe oferecer
-          </p>
-          <button>Saiba mais</button>
+          </ParagraphComponent>
+          <ButtonComponent>Saiba mais</ButtonComponent>
         </section>
 
-        <section className="form">
-          <form className="form-section">
-            <div className="name">
+        {/* <SectionComponent>
+          <form>
+            <DivName>
               <label htmlFor="Name" required>
                 Nome:
               </label>
-              <input type="text" />
-            </div>
-            <div className="email">
+              <inputNameComponent />
+            </DivName>
+            <divEmail>
               <label htmlFor="Email">E-mail</label>
-              <input type="email" required />
-            </div>
+              <inputEmail />
+            </divEmail>
           </form>
-        </section>
-      </main>
+        </SectionComponent> */}
+      </MainComponent>
     </>
   );
 }
